@@ -1,31 +1,29 @@
 # Projeto - Arquitetura em Microsserviços: Controle de Condomínios
 
-[cite_start]Este projeto foi desenvolvido como parte da avaliação da disciplina de Arquitetura de Software[cite: 240]. [cite_start]O objetivo é construir o back-end de uma aplicação distribuída utilizando a arquitetura de microsserviços, demonstrando comunicação síncrona, validação de dados distribuída e orquestração de transações[cite: 242].
-
----
+Este projeto foi desenvolvido como parte da avaliação da disciplina de Arquitetura de Software. O objetivo é construir o back-end de uma aplicação distribuída utilizando a arquitetura de microsserviços, demonstrando comunicação síncrona, validação de dados distribuída e orquestração de transações.
 
 ## 1. Documento de Requisitos
 
 ### a. Propósito do Sistema
-O sistema tem como propósito gerenciar as informações de um condomínio de forma desacoplada. [cite_start]Ele permite o cadastro de moradores, unidades habitacionais e o lançamento de taxas condominiais, garantindo a integridade financeira e cadastral através de integrações em tempo real entre os serviços[cite: 251].
+O sistema tem como propósito gerenciar as informações de um condomínio de forma desacoplada. Ele permite o cadastro de moradores, unidades habitacionais e o lançamento de taxas condominiais, garantindo a integridade financeira e cadastral através de integrações em tempo real entre os serviços.
 
 ### b. Usuários
-* [cite_start]**Administrador (Síndico/Zeladoria):** Responsável por cadastrar unidades, registrar moradores e lançar cobranças[cite: 252].
+* **Administrador (Síndico/Zeladoria):** Responsável por cadastrar unidades, registrar moradores e lançar cobranças.
 
-### c. [cite_start]Requisitos Funcionais (RF) [cite: 253]
+### c. Requisitos Funcionais (RF)
 Abaixo estão listadas as funcionalidades e regras de negócio implementadas:
 
 * **[RF01] Manter Moradores:** Cadastro, consulta e atualização de moradores e seus saldos devedores.
 * **[RF02] Manter Residências:** Cadastro e consulta de unidades habitacionais.
-* **[RF03] Regra de Negócio (Bloqueio de Inadimplência):** O sistema **não deve permitir** o cadastro de uma residência vinculada a um morador que possua dívidas ativas (ValorDivida > 0).
+* **[RF03] Regra de Negócio (Bloqueio de Inadimplência):** O sistema não deve permitir o cadastro de uma residência vinculada a um morador que possua dívidas ativas (ValorDivida > 0).
 * **[RF04] Lançar Taxas:** Cadastro de cobranças associadas a uma residência.
-* [cite_start]**[RF05] Integração de Consulta (Residência -> Morador):** Ao consultar uma residência, o sistema deve buscar automaticamente o nome e telefone do morador no serviço de Moradores[cite: 246].
-* [cite_start]**[RF06] Validação de Lançamento (Taxas -> Residência):** Antes de lançar uma taxa, o sistema deve validar na API de Residências se a unidade existe e está ativa[cite: 272].
-* [cite_start]**[RF07] Atualização Financeira (Taxas -> Morador):** Após lançar uma taxa, o sistema deve atualizar automaticamente a dívida do morador responsável na API de Moradores[cite: 273].
+* **[RF05] Integração de Consulta (Residência -> Morador):** Ao consultar uma residência, o sistema deve buscar automaticamente o nome e telefone do morador no serviço de Moradores.
+* **[RF06] Validação de Lançamento (Taxas -> Residência):** Antes de lançar uma taxa, o sistema deve validar na API de Residências se a unidade existe e está ativa.
+* **[RF07] Atualização Financeira (Taxas -> Morador):** Após lançar uma taxa, o sistema deve atualizar automaticamente a dívida do morador responsável na API de Moradores.
 
 ---
 
-## [cite_start]2. Descritivo Técnico [cite: 254]
+## 2. Descritivo Técnico
 
 A solução utiliza **.NET 8** e **SQLite**, composta por três microsserviços independentes que se comunicam via **HTTP/REST**.
 
