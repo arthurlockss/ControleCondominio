@@ -1,0 +1,55 @@
+[
+  {
+    "ContainingType": "Moradores.API.Controllers.MoradorController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/Morador",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Moradores.API.DTO.InserirMoradorDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Moradores.API.Controllers.MoradorController",
+    "Method": "Buscar",
+    "RelativePath": "api/Morador/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Moradores.API.Controllers.MoradorController",
+    "Method": "AtualizarDivida",
+    "RelativePath": "api/Morador/atualizar-divida/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Moradores.API.DTO.AtualizarDividaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

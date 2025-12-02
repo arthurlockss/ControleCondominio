@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Moradores.API/Moradores.API.csproj" />
+  <Project Path="Residencias.API/Residencias.API.csproj" />
+</Solution>

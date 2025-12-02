@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "Novo Perfil",
+    "Projects": [
+      {
+        "Path": "Moradores.API\\Moradores.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Residencias.API\\Residencias.API.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Taxas.API\\Taxas.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

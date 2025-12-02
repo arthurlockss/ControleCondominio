@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "Residencias.API.Controllers.ResidenciaController",
+    "Method": "Cadastrar",
+    "RelativePath": "api/Residencia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Residencias.API.DTO.InserirResidenciaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Residencias.API.Controllers.ResidenciaController",
+    "Method": "Buscar",
+    "RelativePath": "api/Residencia/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
