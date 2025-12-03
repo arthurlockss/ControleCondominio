@@ -1,0 +1,6 @@
+@Taxas.API_HostAddress = http://localhost:5084
+
+GET {{Taxas.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

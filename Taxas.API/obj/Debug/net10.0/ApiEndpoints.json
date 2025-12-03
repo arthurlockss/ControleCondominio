@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Taxas.API.Controllers.TaxaController",
+    "Method": "LancarTaxa",
+    "RelativePath": "api/Taxa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Taxas.API.DTO.LancarTaxaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
